@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rosco Deportivo — Pasapalabra de deportes</title>
+  <meta name="description" content="Pasapalabra de deportes: completa el rosco de la A a la Z antes de que acabe el tiempo." />
+  <link rel="icon" href="img/balon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="field">
+    <header>
+      <h1>ROSCO <span class="gold">DEPORTIVO</span></h1>
+      <div id="score" class="score hidden">
+        <span class="pill ok">✓ <b id="nOk">0</b></span>
+        <span class="pill ko">✗ <b id="nKo">0</b></span>
+      </div>
+    </header>
+    <div id="board" class="board">
+      <div class="center">
+        <section id="intro">
+          <img src="img/balon.svg" alt="" class="ball" />
+          <p class="muted">Completa el rosco de deportes en 3 minutos. Pulsa “Pasa” si dudas.</p>
+          <button id="startBtn" class="btn-hero">¡A JUGAR!</button>
+        </section>
+        <section id="play" class="hidden">
+          <div id="timer" class="timer">180</div>
+          <p id="type" class="type"></p>
+          <p id="clue" class="clue"></p>
+          <form id="form">
+            <input id="answer" autocomplete="off" placeholder="Tu respuesta…" />
+            <div class="row">
+              <button type="submit" class="btn-hero small">Responder</button>
+              <button type="button" id="passBtn" class="btn-pass">Pasa</button>
+            </div>
+          </form>
+          <p id="reveal" class="reveal"></p>
+        </section>
+        <section id="end" class="hidden">
+          <div id="medal" class="medal"></div>
+          <p id="final" class="final"></p>
+          <p id="msg" class="muted"></p>
+          <button id="againBtn" class="btn-hero">REVANCHA</button>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="js/questions.js"></script>
+  <script src="js/sounds.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
